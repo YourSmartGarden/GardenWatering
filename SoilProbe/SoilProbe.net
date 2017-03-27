@@ -1,0 +1,68 @@
+(export (version D)
+  (design
+    (source /Users/dbonzon/GitHub/GardenWatering/SoilProbe/SoilProbe.sch)
+    (date "Lundi, 27 mars 2017 22:38:17")
+    (tool "Eeschema 4.0.5")
+    (sheet (number 1) (name /) (tstamps /)
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source SoilProbe.sch)
+        (comment (number 1) (value ""))
+        (comment (number 2) (value ""))
+        (comment (number 3) (value ""))
+        (comment (number 4) (value "")))))
+  (components
+    (comp (ref P1)
+      (value CONN_01X02)
+      (libsource (lib conn) (part CONN_01X02))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 58D97786))
+    (comp (ref P2)
+      (value CONN_01X01)
+      (libsource (lib conn) (part CONN_01X01))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 58D977BC))
+    (comp (ref P3)
+      (value CONN_01X01)
+      (libsource (lib conn) (part CONN_01X01))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 58D977FF)))
+  (libparts
+    (libpart (lib conn) (part CONN_01X01)
+      (description "Connector, single row, 01x01")
+      (footprints
+        (fp Pin_Header_Straight_1X01)
+        (fp Pin_Header_Angled_1X01)
+        (fp Socket_Strip_Straight_1X01)
+        (fp Socket_Strip_Angled_1X01))
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_01X01))
+      (pins
+        (pin (num 1) (name P1) (type passive))))
+    (libpart (lib conn) (part CONN_01X02)
+      (description "Connector, single row, 01x02")
+      (footprints
+        (fp Pin_Header_Straight_1X02)
+        (fp Pin_Header_Angled_1X02)
+        (fp Socket_Strip_Straight_1X02)
+        (fp Socket_Strip_Angled_1X02))
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_01X02))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name P2) (type passive)))))
+  (libraries
+    (library (logical conn)
+      (uri "/Library/Application Support/kicad/library/conn.lib")))
+  (nets
+    (net (code 1) (name "Net-(P1-Pad1)")
+      (node (ref P1) (pin 1))
+      (node (ref P2) (pin 1)))
+    (net (code 2) (name "Net-(P1-Pad2)")
+      (node (ref P1) (pin 2))
+      (node (ref P3) (pin 1)))))
